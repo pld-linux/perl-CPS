@@ -1,3 +1,4 @@
+#
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
@@ -5,13 +6,14 @@
 %define		pdir	CPS
 %define		pnam	CPS
 Summary:	CPS - manage flow of control in Continuation-Passing Style
+Summary(pl.UTF-8):	CPS - zarządzanie przepływem sterowania w stylu przekazywania kontynuacji
 Name:		perl-CPS
 Version:	0.11
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PE/PEVANS/%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/P/PE/PEVANS/%{pnam}-%{version}.tar.gz
 # Source0-md5:	e4f36f053f538a6fa1ea4ed1de038f9e
 URL:		http://search.cpan.org/dist/CPS/
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -20,7 +22,12 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-CPS - manage flow of control in Continuation-Passing Style.
+CPS module allows to manage flow of control in Continuation-Passing
+Style.
+
+%description -l pl.UTF-8
+Moduł CPS pozwala na zarządzanie przepływem sterowania w stylu
+przekazywania kontynuacji (Continuation Passing).
 
 %prep
 %setup -q -n %{pnam}-%{version}
@@ -45,4 +52,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{perl_vendorlib}/CPS.pm
 %{perl_vendorlib}/CPS
-%{_mandir}/man3/CPS*.3*
+%{_mandir}/man3/CPS*.3pm*
