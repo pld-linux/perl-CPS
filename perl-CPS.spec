@@ -9,7 +9,7 @@ Summary:	CPS - manage flow of control in Continuation-Passing Style
 Summary(pl.UTF-8):	CPS - zarządzanie przepływem sterowania w stylu przekazywania kontynuacji
 Name:		perl-CPS
 Version:	0.12
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
