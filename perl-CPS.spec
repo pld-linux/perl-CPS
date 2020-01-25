@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	CPS
 %define		pnam	CPS
 Summary:	CPS - manage flow of control in Continuation-Passing Style
